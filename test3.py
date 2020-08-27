@@ -12,8 +12,8 @@ The mail is sent using Python SMTP library.
 Thank You!
 '''
 #The mail addresses and password
-sender_address = "nikhil.raj@generateyourapp.com"
-sender_pass = "nikhil@Raj1"
+sender_address = "XYZ@gmail.com"
+sender_pass = "ndXX@XX3$#XXX"
 
 e = pd.read_excel("email.xlsx")
 emails = e['Emails'].values
@@ -21,7 +21,7 @@ names = e["Names"].values
 print(f"The receiver's mail ids are : \n\n{emails}")
 
 #Create SMTP session for sending the mail
-session = smtplib.SMTP('smtp.zoho.in', 587) #use gmail with port
+session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
 session.starttls() #enable security
 session.login(sender_address, sender_pass) #login with mail_id and password
 
@@ -41,7 +41,7 @@ for email,name in zip(emails,names):
 	payload.set_payload((attach_file).read())
 	encoders.encode_base64(payload) #encode the attachment
 	#add payload header with filename
-	payload.add_header('Content-Decomposition', maintype='image', "attachment; filename= %s" % attach_file_name)
+	payload.add_header('Content-Decomposition', "attachment", maintype='image', filename= "attach_file_name")
 	message.attach(payload)
 	text = message.as_string()
 	session.sendmail(sender_address, email, text)

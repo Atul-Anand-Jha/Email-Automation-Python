@@ -5,23 +5,22 @@ import smtplib
 
 msg = EmailMessage()
 
-SenderAddress = "nikhil.raj@generateyourapp.com"
-password = "nikhil@Raj1"
+SenderAddress = "XYZ@gmail.com"
+password = "ndXX@XX3$#XXX"
 
 # Define these once; use them twice!
 strFrom = SenderAddress
-strTo = 'atulanand.jha@gmail.com'
+strTo = 'abc.123@gmail.com'
 
 # generic email headers
 msg['Subject'] = 'Hello there'
 msg['From'] = SenderAddress
-# msg['To'] = 'PQRS <pqrs@xyz.com>'
 
 # set the plain text body
 msg.set_content('This is a plain text body.')
 
 # now create a Content-ID for the image
-image_cid = make_msgid(domain='generateyourapp.com')
+image_cid = make_msgid(domain='testDomain.com')
 # if `domain` argument isn't provided, it will 
 # use your computer's name
 
@@ -42,7 +41,7 @@ msg.add_alternative("""\
 
 
 # now open the image and attach it to the email
-with open('banner.png', 'rb') as img:
+with open('banner.jpg', 'rb') as img:
 
     # know the Content-Type of the image
     maintype, subtype = mimetypes.guess_type(img.name)[0].split('/')
@@ -58,7 +57,7 @@ with open('banner.png', 'rb') as img:
 # you can write it to a file
 # or send it using smtplib
 
-smtp = smtplib.SMTP('smtp.zoho.in', 587, timeout=15)
+smtp = smtplib.SMTP('smtp.gmail.com', 587, timeout=15)
 smtp.starttls()
 smtp.login(SenderAddress, password)
 smtp.sendmail(strFrom, strTo, msg.as_string())

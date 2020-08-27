@@ -11,12 +11,12 @@ import progressbar
 import getpass
 
 ################ Email fixed, password Fixed : #####################
-# SenderAddress = "nikhil.raj@generateyourapp.com"
+# SenderAddress = "XYZ@gmail.com"
 # password = "XXXXXXXXXXX"
 
 ################ Email fixed, input password : #####################
 #input through cmd...
-SenderAddress = "nikhil.raj@generateyourapp.com"
+SenderAddress = "XYZ@gmail.com"
 password = getpass.getpass("Enter your secret password : ")
 
 ################ Input Email, Input password : #####################
@@ -33,7 +33,7 @@ print(f"The receiver's mail-ids are : \n\n{emails}")
 
 #Create SMTP session for sending the mail
 try :
-	smtp = smtplib.SMTP('smtp.zoho.in', 587) #use gmail with port
+	smtp = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
 	smtp.starttls() #enable security
 	smtp.login(SenderAddress, password) #login with mail_id and password
 except smtplib.SMTPAuthenticationError:
@@ -53,35 +53,25 @@ except smtplib.SMTPAuthenticationError:
 mail_content = """\
 <div>Hi {},</div>
 <div>&nbsp;</div>
-<div>We are a young tech startup working for empowering influencers and their brand and enabling them with different tools to help them&nbsp;<u>earn more and connect with their fans better.</u></div>
+<div>This is a mail with HTML body as MIME text type.&nbsp;<u>This is underlined Text</u></div>
 <div>&nbsp;</div>
-<div>We can give you your own personalized app in<u>&nbsp;your own brand name on the Playstore for free in a day</u>&nbsp;with the following features.</div>
+<div>1. This is point in ordered list.</div>
 <div>&nbsp;</div>
-<div>1. The app will contain all the videos and playlist that you have on youtube.</div>
-<div>&nbsp;</div>
-<div>2. You will be able to<strong>&nbsp;add app-only exclusive videos/ paid courses.</strong></div>
-<div>&nbsp;</div>
-<div>3. Your app will have a separate product/merchandise section where you can add&nbsp;<strong>affiliate product</strong>&nbsp;that you promote or you can sell your own products directly.</div>
-<div>&nbsp;</div>
-<div>4. You will be able to conduct&nbsp; exclusive&nbsp;<strong>paid live sessions&nbsp;</strong>on your own app.</div>
-<div>&nbsp;</div>
-<div>5. You will be able to<strong>&nbsp;send app notification&nbsp;</strong>and do targeted marketing.</div>
+<div>2. This is point number 2 with <strong>&nbsp;strong text style.</strong></div>
 <div>&nbsp;</div>
 <div><img src="cid:image1";disp=emb" width="470" height="711" data-image-whitelisted="" /></div>
 <div>&nbsp;</div>
-<div>On the commercials, there is no upfront charge, you will get your app for free. We earn revenue and support you by charging 5% transaction fee on every purchase in the app.</div>
-<div>&nbsp;</div>
-<div>If you find this interesting you can reply to this mail or reach out to the founder directly at&nbsp;<u>9804880496</u>.</div>
+<div>If you find this interesting you can reply to this mail or reach out to the founder directly at&nbsp;<u>98XXXXXX12</u>.</div>
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 <div>Regards,</div>
-<div>Nikhil Raj,</div>
-<div><a href="https://generateyourapp.com/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://generateyourapp.com/&amp;source=gmail&amp;ust=1598355630656000&amp;usg=AFQjCNH49bTa00inLF_w4QHHdg7C6dC9Lw">https://generateyourapp.com/</a></div>
+<div>Atul,</div>
+<div><a href="https://python.org/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://python.org/</a></div>
 """
 
 ############# Loading IMage embedding ####################
 # It assumes the image is in the current directory
-fp = open('banner.png', 'rb')
+fp = open('banner.jpg', 'rb')
 msgImage = MIMEImage(fp.read())
 fp.close()
 
@@ -91,7 +81,7 @@ fp.close()
 for email, name, i in zip(emails, names, progressbar.progressbar(range(len(emails)))):
 	# Create the root message and fill in the from, to, and subject headers
 	msgRoot = MIMEMultipart('related')
-	msgRoot['Subject'] = 'Get your OWN personal branding app for free'
+	msgRoot['Subject'] = 'This is the subject of your mail.'
 	msgRoot['From'] = SenderAddress
 	msgRoot['To'] = email
 	msgRoot.preamble = 'This is a multi-part message in MIME format.'
@@ -105,7 +95,7 @@ for email, name, i in zip(emails, names, progressbar.progressbar(range(len(email
 	msgAlternative.attach(msgText)
 
 
-	msgText = MIMEText(mail_content.format(name), 'html')
+	msgText = MIMEText(mail_content.format(name), 'html') #this prohibts from phishing mark.
 	msgAlternative.attach(msgText)
 
 
