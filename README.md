@@ -31,54 +31,75 @@
  
  # Each Script serves a different purpose : 
  
- ### Type 1 : Simple Text email
  
- Input :
+ 
+- ### Type 1 : Simple Text email
+ 
+ 
+ <ins>Input :</ins>
  
  ![input1](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/test1IN.png)
  
- Output :
+ 
+ <ins>Output :</ins>
  
  ![output1](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/test1OUT.png)
  
  
- ### Type 2 : 
  
- Input :
+- ### Type 2 : 
+ 
+ 
+ <ins>Input :</ins>
  
  ![input2](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/test2IN.png)
  
- Output :
+ 
+ <ins>Output :</ins>
  
  ![output2](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/test2OUT.png)
  
- ### Type 3 : 
  
- Input :
+ 
+- ### Type 3 : 
+ 
+ 
+ <ins>Input :</ins>
  
  ![input3](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/test3IN.png)
  
- Output :
+ 
+ <ins>Output :</ins>
  
  ![output3](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/test3OUT.png)
  
- ### Type 4 :
  
- Input :
+ 
+- ### Type 4 :
+ 
+ 
+ <ins>Input :</ins>
  
  ![input4](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/test4IN.png)
  
- Output :
+ 
+ <ins>Output :</ins>
  
  ![output4](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/test4OUT.png)
  
- ### Type 5 :
  
- Input :
+ 
+- ### Type 5 :
+ 
+ 
+ <ins>Input :</ins>
  
  ![input5](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/senderIN.png)
  
- Output :
+ 
+ <ins>Output :</ins>
  
  ![output5](https://github.com/Atul-Anand-Jha/Email_Automation_Python/blob/master/img/senderOUT.png)
  
+
+# Thanks!
