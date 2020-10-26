@@ -15,7 +15,7 @@
  
  **1. emails.xlsx**
  
- You need to put all email ids with the receiver's name in *email.xslx* [ any spreadsheet ]. You will read them all, and send mails one by one in your automated python script.
+ You need to put all email ids with the receiver's name in *email.xlsx* [ any spreadsheet ]. You will read them all, and send mails one by one in your automated python script.
  
  **2. requirements.txt**
  
