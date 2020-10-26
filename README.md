@@ -33,7 +33,7 @@
  
  
  
-- ### Type 1 : Simple Text email
+- ### Type 1 : Simple Text email with dynamic receiver's name.
  
  
  <ins>Input :</ins>
@@ -61,7 +61,7 @@
  
  
  
-- ### Type 3 : 
+- ### Type 3 : An email witha body and an attachment file.
  
  
  <ins>Input :</ins>
@@ -75,7 +75,7 @@
  
  
  
-- ### Type 4 :
+- ### Type 4 : An email with body in HTML format with image embedding. [Marked as PHISHING by GMAIL]
  
  
  <ins>Input :</ins>
@@ -89,7 +89,7 @@
  
  
  
-- ### Type 5 :
+- ### Type 5 : A perfect email with HTML w/o caught as PHISHING using MIME. [email / password from CMD]
  
  
  <ins>Input :</ins>
