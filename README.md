@@ -47,7 +47,7 @@
  
  
  
-- ### Type 2 : 
+- ### Type 2 : Simple email with an attachment only.
  
  
  <ins>Input :</ins>
